@@ -8,7 +8,10 @@
   grid-template-rows: 550px;
 }
 
-/* goes inside of conainter */
+/* DONT forgot to remove the z index from the photos so the buttons can overlay them and you can click 
+on the right half of the button to move around */
+
+/* goes inside of MGconainter */
 .mainGallery {
   grid-column: 2/ span 2;
   grid-row: 1;
@@ -16,20 +19,33 @@
   width: 100%;
   background-size: cover;
   background-repeat:no-repeat;
-  z-index: 1;
+  z-index: 20;
   background-position: center center;
 }
 
-/* goes inside of main gallery */
+/* goes inside of main gallery ^^ */
+.galleryMediumLayer {
+  margin: auto;
+  height: 100%;
+  /* width: auto; */
+  z-index: inherit;
+  overflow: hidden;
+}
+
+/* goes inside of Medium layer */
 .mainPhoto {
-  min-height: 100%;
+  height: 100%;
   background-position: center center;
-  border-radius: 25px;
-  background-size: cover;
+  /* change photo to contain? */
+  background-size: auto 100%;
   background-repeat:no-repeat;
+  z-index: 20;
+  border-radius: 25px;
+  width: auto;
+  border: 40px black
 }
 
-/* goes inside of mainGallery */
+/* goes inside of mainGalleryContainer */
 .leftArrow {
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -40,7 +56,7 @@
     cursor: pointer;
 }
 
-/* goes inside of mainGallery */
+/* goes inside of mainGalleryConatiner */
 .rightArrow {
     grid-column: 3 / span 2;
     grid-row: 1;
@@ -66,7 +82,8 @@
      transition: opacity 150ms ease-out 0s, transform 150ms ease-out 0s;
 }
 
-/* Here on is the positioning of the components //////////////////
+/* Here on is the positioning of the components
+/* OUTER MOST GRID, inside of this goes the main gallery grid, and preview caro flex */
 
 /* biggest all encompassing container */
 .galleryPageContainer {

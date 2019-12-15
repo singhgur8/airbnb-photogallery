@@ -25,7 +25,11 @@ function MainCarousel (props) {
       </button>
 
       <div className={`${styles.mainGallery}`}>
-        <div className={`${styles.mainPhoto} ${fade}`} style={style} />
+        <div className={styles.galleryMediumLayer}>
+          <div className={`${styles.mainPhoto} ${fade}`} style={style} />
+          <img src={url} alt="rooms" className={styles.mainPhoto} />
+          {/* try switching the inner most to an image tag, it might make it easier for the borders to get auto of the image size */}
+        </div>
       </div>
 
     </div>

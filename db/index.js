@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoUri = 'mongodb://database/airbnb';
+const mongoUri = 'mongodb://localhost/airbnb';
 
 // mongoose.connect(mongoUri, { useNewUrlParser: true })
 

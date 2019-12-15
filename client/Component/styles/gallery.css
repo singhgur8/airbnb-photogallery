@@ -13,8 +13,12 @@
   height: 100%;
   width: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
   transition: transform .4s;
   cursor: pointer;
+  /* background-position: center; */
+  /* make another div outside photo div, give it height of the max height of the outside container, width be auto, give it same border radius
+  as outside one, and give it overflow hidden , and give it margins auto,  */
 }
 .divInnerDarken {
   height: 100%;
